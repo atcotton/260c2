@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  <title>
+    Weather Engine
+  </title>
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+  <header class="w3-container w3-theme w3-padding" id="myHeader">
+  <div class="w3-center">
+  <h1 class="w3-xxxlarge w3-animate-bottom">Weather Engine</h1>
+  <h4>Weather Data Supplied by OpenWeatherMap.org</h4>
+  <h4>IP Based Location Data was Supplied by ip-api.com</h4>
+    <div class="w3-padding-32">
+    <form>
+      <label>Enter a U.S. city</label>
+      <input id="weatherInput" type="text"></input>
+      
+      <input class="w3-button w3-theme" id="weatherSubmit" type="submit" value="Submit"></input><br/>
+    </form>
+    </div>
+  </div>
+</header>
+  <body onload="javascript:updateWeather()">
+    
+    <center>
+    <div id="weatherResults">
+    </div>
+    </center>
+    
+    <br/>
+    <p></p>
+    
+    <div class="w3-left w3-blue-grey">
+      <h2><center>About this Project</center></h2>
+      <p><left>Now, I'm sure you're wondering how this isn't just our weather api project thing.</left>
+      <center>Long story short: it is.</center><br>
+      
+      <left>You'll notice that you never passed it a city when you started though. Your location was deduced via your ip address. 
+      That ip address was passed over to ip-api.com and they gave me your estimated location, which was then fed to our friends over at OpenWeatherMap.com.<br>
+      And let me tell you does that make how you structure your promises important.
+      </left></p>
+      
+    </div>
+    
+    <br>
+    <h2>Limitations</h2>
+    <p>There is a none zero chance that your location was pulled incorretly though. IP addresses don't always translate nicely to physical locations.</p>
+    
+    
+    <div id="ipData"></div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <!--script src="moment.js"></script>-->
+    <script src="javascript.js"></script>
+  </body>
+  
+  
+  
+  <footer class="w3-container w3-theme-dark w3-padding-16">
+  <h3>Catch this project on <a href="https://github.com/atcotton/260c2">Github</a></h3>
+  <p>Powered (ineffectively) by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>&nbsp;   
+    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+</html>
